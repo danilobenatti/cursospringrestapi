@@ -13,7 +13,7 @@ public class UsuarioDTO implements Serializable {
     
     private String userCpf;
 
-    private List<TelefoneDTO> userTelefones;
+    private List<Telefone> userTelefones;
     
     public UsuarioDTO(Usuario usuario) {
 	
@@ -23,8 +23,7 @@ public class UsuarioDTO implements Serializable {
 	
 	this.userCpf = usuario.getCpf();
 	
-//	this.userTelefones = usuario.getTelefones();
-	
+	this.userTelefones = usuario.getTelefones();
     }
 
     public String getUserLogin() {
@@ -51,12 +50,12 @@ public class UsuarioDTO implements Serializable {
         this.userCpf = userCpf;
     }
 
-	public List<TelefoneDTO> getUserTelefones() {
-		return userTelefones;
-	}
+    public List<Telefone> getUserTelefones() {
+	return userTelefones;
+    }
 
-	public void setUserTelefones(List<TelefoneDTO> userTelefones) {
-		this.userTelefones = userTelefones;
-	}
+    public void setUserTelefones(List<Telefone> userTelefones) {
+	this.userTelefones = userTelefones;
+    }
 
 }
